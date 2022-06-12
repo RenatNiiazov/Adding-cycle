@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class HelloApplication {
+    public static void main(String[] args) {
+        Scanner x1 = new Scanner(System.in);
+        boolean ex = false;
+        int a = 0;
+        while (!ex){
+            if (x1.hasNextInt()){
+                int b = x1.nextInt();
+                a = a+b;
+            }
+            else {
+                String s = x1.nextLine();
+                ex = s.equals("exit");
+            }
+        }
+        System.out.println(a);
+    }
+}
